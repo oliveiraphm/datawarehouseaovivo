@@ -10,8 +10,8 @@ WITH cleaned_data AS (
     FROM 
         {{ ref('bronze_vendas') }}
     WHERE 
-        valor > 0 
-        AND valor < 8000
+        valor > 1000
+        AND valor < 6000
         AND data <= CURRENT_DATE
 )
 
